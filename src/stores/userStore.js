@@ -21,7 +21,7 @@ export const useUserStore = defineStore("user", {
       }
     ],
 
-    darkMode: localStorage.getItem("darkMode") === "true"
+    darkMode: localStorage.getItem("darkMode") === "false"
   }),
 
   getters: {
