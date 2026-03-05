@@ -7,19 +7,8 @@
   Login
   </h1>
   
-  <input
-  v-model="email"
-  placeholder="Email"
-  class="w-full mb-3 p-3 border rounded"
-  />
-  
-  <input
-  v-model="password"
-  type="password"
-  placeholder="Password"
-  class="w-full mb-4 p-3 border rounded"
-  />
-  
+  <input v-model="email" placeholder="Email" class="input mb-3" />
+  <input v-model="password" type="password" placeholder="Password" class="input mb-4" />  
   <button
   @click="loginUser"
   class="w-full bg-green-600 text-white py-3 rounded-lg"
@@ -31,8 +20,7 @@
   {{ error }}
   </p>
   
-  <div class="mt-6 text-sm text-gray-500">
-  
+  <div class="mt-6 text-sm text-gray-500 dark:text-gray-300">  
   <p class="font-semibold">Demo accounts:</p>
   
   <p>Client: client@demo.com / client123</p>

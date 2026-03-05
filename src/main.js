@@ -4,6 +4,11 @@ import router from './router'
 import { createPinia } from 'pinia'
 import './style.css'
 
+
+if(localStorage.theme === "dark"){
+    document.documentElement.classList.add("dark")
+}
+
 const app = createApp(App)
 
 app.use(createPinia())

@@ -52,8 +52,17 @@ export const useUserStore = defineStore("user", {
     },
 
     toggleDarkMode() {
+
       this.darkMode = !this.darkMode
-      localStorage.setItem("darkMode", this.darkMode)
+    
+      if (this.darkMode) {
+        document.documentElement.classList.add("dark")
+        localStorage.theme = "dark"
+      } else {
+        document.documentElement.classList.remove("dark")
+        localStorage.theme = "light"
+      }
+    
     }
   }
 })

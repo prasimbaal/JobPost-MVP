@@ -102,33 +102,40 @@
   </button>
 
 </div>
-</div>
-  <div
+
+<div class="relative" ref="dropdownRef">
+
+<!-- Avatar -->
+<div
   @click="dropdownOpen = !dropdownOpen"
-  class="w-9 h-9 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center cursor-pointer"
-  >
+  class="w-9 h-9 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-green-500"
+>
   {{ user.role?.charAt(0).toUpperCase() }}
-  </div>
-  
-  <div
+</div>
+
+<!-- Dropdown -->
+<div
   v-if="dropdownOpen"
-  class="absolute right-6 top-16 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg"
-  >
-  
+  class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg border dark:border-gray-700"
+>
+
   <router-link
-  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-  to="/client-dashboard"
+    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+    to="/client-dashboard"
   >
-  Dashboard
+    Dashboard
   </router-link>
-  
+
   <div
-  class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
-  @click="logout"
+    class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+    @click="logout"
   >
-  Logout
+    Logout
   </div>
-  
+
+</div>
+
+</div>  
   </div>
   
   </div>
@@ -157,8 +164,13 @@
   import { useRouter } from "vue-router"
   import { computed } from "vue"
   import { useUserStore } from "@/stores/userStore"
+  import { onClickOutside } from '@vueuse/core'
 
+  const dropdownRef = ref(null)
 
+  onClickOutside(dropdownRef, () => {
+    dropdownOpen.value = false
+  })
   const search = ref("")
   const searchOpen = ref(false)
   const user = useUserStore()
