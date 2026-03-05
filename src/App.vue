@@ -2,12 +2,10 @@
   <MainLayout>
     <router-view />
   </MainLayout>
+  <Analytics />
 </template>
 
 <script setup>
 import MainLayout from './layouts/MainLayout.vue'
-import { inject } from '@vercel/analytics'
-
-// Initialize Vercel Web Analytics
-inject()
+import { Analytics } from '@vercel/analytics/vue'
 </script>
