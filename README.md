@@ -74,27 +74,27 @@ freelancer123
 
 ## Login Page
 
-![Login](screenshots/login.png)
+![Login](/screenshot/login.png)
 
 ## Find Work (Freelancer View)
 
-![Find Work](screenshots/find-work.png)
+![Find Work](/screenshot/find-work.png)
 
 ## Client Dashboard
 
-![Client Dashboard](screenshots/client-dashboard.png)
+![Client Dashboard](/screenshot/client-dashboard.png)
 
 ## Post Job Flow
 
-![Post Job](screenshots/post-job.png)
+![Post Job](/screenshot/post-job.png)
 
 ## Messages UI
 
-![Messages](screenshots/messages.png)
+![Messages](/screenshot/messages.png)
 
 ## Dark Mode
 
-![Dark Mode](screenshots/dark-mode.png)
+![Dark Mode](/screenshot/dark-mode.png)
 
 ---
 
