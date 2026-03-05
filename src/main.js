@@ -3,9 +3,6 @@ import App from './App.vue'
 import router from './router'
 import { createPinia } from 'pinia'
 import './style.css'
-import { inject } from '@vercel/analytics';
-
-inject()
 
 if(localStorage.theme === "dark"){
     document.documentElement.classList.add("dark")
